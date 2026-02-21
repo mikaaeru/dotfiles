@@ -20,10 +20,13 @@ exec dbus-update-activation-environment --all
 exec /usr/bin/gnome-keyring-daemon --start --foreground --components=secrets
 exec /usr/libexec/xdg-desktop-portal-gtk -r
 exec thunar --daemon
-#exec easyeffects --hide-window
+exec /usr/libexec/lxqt-policykit-agent
 for_window [app_id="eog"] floating enable
 exec fcitx5 -d
 
+
+set $gnome-schema org.gnome.desktop.interface
+exec_always gsettings set $gnome-schema color-scheme 'prefer-dark'
 # target           border     bg         text       indicator  child_border
 client.focused_inactive #888888 #888888 #ffffff    #888888    #888888
 client.focused     #d1d1d1    #d1d1d1    #000000    #d1d1d1    #d1d1d1
@@ -43,6 +46,11 @@ set $rofi_cmd rofi \
         -terminal '$term'
 # TODO: add window with the next release of rofi-wayland
 set $menu $rofi_cmd -show combi -combi-modes drun#run -modes combi
+
+# Keyboard brightness up
+bindsym XF86KbdBrightnessUp exec brightnessctl --device='kbd_backlight' set 5%+
+bindsym XF86KbdBrightnessDown exec brightnessctl --device='kbd_backlight' set 5%-
+set $brightness_step 1
 
 # FUCKING SLEEP
 bindsym $mod+Mod1+Escape exec exec systemctl suspend
