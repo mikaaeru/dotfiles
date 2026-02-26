@@ -1,0 +1,25 @@
+[window]
+opacity = 0.8  # 1.0 is opaque, 0.0 is fully transparent
+blur = true      #Optional: helps readability if your compositor supports it
+
+[window.padding]
+x = 5  # Horizontal margin (left and right)
+y = 5  # Vertical margin (top and bottom)
+
+[font]
+size = 10.0
+
+[font.normal]
+family = "MesloLGS NF"
+style = "Regular"
+
+[font.bold]
+family = "MesloLGS NF"
+style = "Bold"
+
+[font.italic]
+family = "MesloLGS NF"
+style = "Italic"
+
+[scrolling]
+multiplier = 50

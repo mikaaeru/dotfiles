@@ -3,28 +3,20 @@
 **/.DS_Store
 **/._.DS_Store
 
-# 1. Ignore everything
-*
-
-# 2. But do NOT ignore the .gitignore itself
-!.gitignore
-
-# 3. Whitelist the specific files
-!brave_debullshitinator-policies.json
-!iphone.icc
-!pavucontrol.ini
-
-# 4. Whitelist the directories AND everything inside them
-!alacritty/**
-!autostart/**
-!dconf/**
-!eog/**
-!fish/**
-!gtk-3.0/**
-!htop/**
-!nvim/**
-!rofi/**
-!sway/**
-!Thunar/**
-!waybar/**
-!xfce4/**
+chromium/
+easyeffects/
+fcitx/
+fcitx5/
+gh/
+google-chrome/
+pulse/
+dconf/
+mozilla/
+ibus/
+libreoffice/
+BraveSoftware/
+eog/
+xarchiver/
+htop/
+lxqt/
+libfm/
